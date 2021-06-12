@@ -1,0 +1,411 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #202124;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Muli, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 81.25%;
+    position: relative;
+}
+.page {
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: CALC(100% - 4%);
+}
+.content {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: 0 15%;
+}
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: stretch;
+}
+.card {
+    position: relative;
+    width: 350px;
+    flex-grow: 3;
+    padding: 0 1% 1% 1%;
+    margin: 1%;
+    color: #d0cccc;
+    box-shadow: 3px 1px 5px 1px RGBA(0,0,0,.25);
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient( to bottom, red, rgba(0, 0, 0, 0) ) 0 0 1 100%;
+}
+.card-header {
+    font-size: 15pt;
+}
+.card-footer { 
+    width: 100%;
+    padding-top: 20px;
+}
+.card:nth-child(1) > .card-body:before {
+    background-image: url(veterinary.png);
+    -webkit-mask-image: url(veterinary.png);
+}
+.card:nth-child(2) > .card-body:before {
+    background-image: url(theater.png);
+    -webkit-mask-image: url(theater.png);
+}
+.card:nth-child(3) > .card-body:before {
+    background-image: url(astrology.png);
+    -webkit-mask-image: url(astrology.png);
+}
+.card:nth-child(4) > .card-body:before {
+    background-image: url(astronomy.png);
+    -webkit-mask-image: url(astronomy.png);
+}
+.card:nth-child(5) > .card-body:before {
+    background-image: url(blockchain.png);
+    -webkit-mask-image: url(blockchain.png);
+}
+.card:nth-child(6) > .card-body:before {
+    background-image: url(budget.png);
+    -webkit-mask-image: url(budget.png);
+}
+.card:nth-child(7) > .card-body:before {
+    background-image: url(weather.png);
+    -webkit-mask-image: url(weather.png);
+}
+.card:nth-child(8) > .card-body:before {
+    background-image: url(computer.png);
+    -webkit-mask-image: url(computer.png);
+}
+.card:nth-child(9) > .card-body:before {
+    background-image: url(dictionary.png);
+    -webkit-mask-image: url(dictionary.png);
+}
+.card:nth-child(10) > .card-body:before {
+    background-image: url(directories.png);
+    -webkit-mask-image: url(directories.png);
+}
+.card:nth-child(11) > .card-body:before {
+    background-image: url(economics.png);
+    -webkit-mask-image: url(economics.png);
+}
+.card:nth-child(12) > .card-body:before {
+    background-image: url(education.png);
+    -webkit-mask-image: url(education.png);
+}
+.card:nth-child(13) > .card-body:before {
+    background-image: url(job.png);
+    -webkit-mask-image: url(job.png);
+}
+.card:nth-child(14) > .card-body:before {
+    background-image: url(environment.png);
+    -webkit-mask-image: url(environment.png);
+}
+.card:nth-child(15) > .card-body:before {
+    background-image: url(film.png);
+    -webkit-mask-image: url(film.png);
+}
+.card:nth-child(16) > .card-body:before {
+    background-image: url(food.png);
+    -webkit-mask-image: url(food.png);
+}
+.card:nth-child(17) > .card-body:before {
+    background-image: url(dice.png);
+    -webkit-mask-image: url(dice.png);
+}
+.card:nth-child(18) > .card-body:before {
+    background-image: url(government.png);
+    -webkit-mask-image: url(government.png);
+}
+.card:nth-child(19) > .card-body:before {
+    background-image: url(health.png);
+    -webkit-mask-image: url(health.png);
+}
+.card:nth-child(20) > .card-body:before {
+    background-image: url(history.png);
+    -webkit-mask-image: url(history.png);
+}
+.card:nth-child(21) > .card-body:before {
+    background-image: url(research.png);
+    -webkit-mask-image: url(research.png);
+}
+.card:nth-child(22) > .card-body:before {
+    background-image: url(writing.png);
+    -webkit-mask-image: url(writing.png);
+}
+.card:nth-child(23) > .card-body:before {
+    background-image: url(speech.png);
+    -webkit-mask-image: url(speech.png);
+}
+.card:nth-child(24) > .card-body:before {
+    background-image: url(law.png);
+    -webkit-mask-image: url(law.png);
+}
+.card:nth-child(25) > .card-body:before {
+    background-image: url(books.png);
+    -webkit-mask-image: url(books.png);
+}
+.card:nth-child(26) > .card-body:before {
+    background-image: url(ads.png);
+    -webkit-mask-image: url(ads.png);
+}
+.card:nth-child(27) > .card-body:before {
+    background-image: url(math.png);
+    -webkit-mask-image: url(math.png);
+}
+.card:nth-child(28) > .card-body:before {
+    background-image: url(media.png);
+    -webkit-mask-image: url(media.png);
+}
+.card:nth-child(29) > .card-body:before {
+    background-image: url(music.png);
+    -webkit-mask-image: url(music.png);
+}
+.card:nth-child(30) > .card-body:before {
+    background-image: url(news.png);
+    -webkit-mask-image: url(news.png);
+}
+.card:nth-child(31) > .card-body:before {
+    background-image: url(philosophy.png);
+    -webkit-mask-image: url(philosophy.png);
+}
+.card:nth-child(32) > .card-body:before {
+    background-image: url(photos.png);
+    -webkit-mask-image: url(photos.png);
+}
+.card:nth-child(33) > .card-body:before {
+    background-image: url(physics.png);
+    -webkit-mask-image: url(physics.png);
+}
+.card:nth-child(34) > .card-body:before {
+    background-image: url(place.png);
+    -webkit-mask-image: url(place.png);
+}
+.card:nth-child(35) > .card-body:before {
+    background-image: url(religion.png);
+    -webkit-mask-image: url(religion.png);
+}
+.card:nth-child(36) > .card-body:before {
+    background-image: url(science.png);
+    -webkit-mask-image: url(science.png);
+}
+.card:nth-child(37) > .card-body:before {
+    background-image: url(code.png);
+    -webkit-mask-image: url(code.png);
+}
+.card:nth-child(38) > .card-body:before {
+    background-image: url(stats.png);
+    -webkit-mask-image: url(stats.png);
+}
+.card:nth-child(39) > .card-body:before {
+    background-image: url(theatre.png);
+    -webkit-mask-image: url(theatre.png);
+}
+.card-body:before {
+    content: '';
+    background-color: #a22828;
+    width: 64px;
+    height: 64px;
+    z-index: 5;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    -webkit-mask-size: cover;
+    vertical-align: top;
+    margin-right: 20px;
+    filter: contrast(.50) brightness(.75);
+}
+.card-body {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.card-body div {
+    display: inline-block;
+    width: CALC(100% - 88px);
+    line-height: 25pt;
+    font-size: 12pt;
+}
+span.desc {
+    font-weight: 900;
+}
+
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) { 
+  input[type=checkbox] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .3);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+  }
+  input[type=checkbox]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+  }
+  input[type=checkbox]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+  }
+  input[type=checkbox]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  input[type=checkbox]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  input[type=checkbox]:disabled + label {
+    cursor: not-allowed;
+  }
+  input[type=checkbox]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  input[type=checkbox]:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  input[type=checkbox]:not(.switch) {
+    width: 21px;
+  }
+  input[type=checkbox]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  input[type=checkbox]:not(.switch):checked {
+    --o: 1;
+  }
+  input[type=checkbox] + label {
+    font-size: 14px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  input[type=checkbox]:not(.switch) {
+    border-radius: 7px;
+  }
+  input[type=checkbox]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(var(--r, 20deg));
+  }
+  input[type=checkbox]:not(.switch):checked {
+    --r: 43deg;
+  }
+  input[type=checkbox].switch {
+    width: 38px;
+    border-radius: 11px;
+  }
+  input[type=checkbox].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--ab, var(--border));
+    transform: translateX(var(--x, 0));
+  }
+  input[type=checkbox].switch:checked {
+    --ab: var(--active-inner);
+    --x: 17px;
+  }
+  input[type=checkbox].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+  }
+}
+ul {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+ul li {
+    margin: 0;
+    position: relative;
+}
+input[type=checkbox] {
+    --active: #8b1616;
+    --active-inner: #fff;
+    --focus: 2px #8b16164d;
+    --border: #e1bbbb;
+    --border-hover: #8b1616d9;
+    --background: #fff;
+    --disabled: #fff6f6;
+    --disabled-inner: #f9e1e9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+.wallet {
+    text-align: center;
+    width: 98%;
+    margin: 1%;
+}
+input[type="text"] {
+    width: 85%;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+input[type="submit"] {
+    height: 45px;
+    width: 10%;
+    background-color: #9d5f5f;
+    color: whitesmoke;
+    border-radius: 5px;
+    position: relative;
+    top: 2px;
+}

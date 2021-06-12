@@ -1,0 +1,13 @@
+syntax = "proto3";
+package tac;
+option java_package = "com.tacplatform.protobuf.transaction";
+option csharp_namespace = "Tac";
+option go_package = "github.com/tacplatform/gotac/pkg/grpc/generated/tac";
+
+message Recipient {
+    oneof recipient {
+        // First 20 bytes of the result of the Keccak256(Blake2b256(publicKey)) hashing function.
+        bytes public_key_hash = 1;
+        string alias = 2;
+    };
+};

@@ -1,0 +1,137 @@
+plugins {
+    id 'application'
+    id 'org.beryx.runtime' version '1.9.1'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group 'com.tacfx'
+version '1.15.0'
+
+sourceCompatibility = 14
+targetCompatibility = 14
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url 'https://jitpack.io' }
+   flatDir {
+       dirs 'libs'
+   }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+mainClassName = 'com.tacfx.tacfx.Launcher'
+
+javafx {
+    version = "15"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.graphics']
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+}
+
+compileTestJava {
+    options.encoding = "UTF-8"
+}
+
+dependencies {
+    implementation 'org.apache.logging.log4j:log4j-core:2.12.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.12.1'
+    implementation 'com.electronwill.night-config:toml:3.6.0'
+    implementation 'org.kordamp.ikonli:ikonli-javafx:11.3.4'
+    implementation 'org.kordamp.ikonli:ikonli-materialdesign-pack:11.3.4'
+    implementation 'javax.servlet:javax.servlet-api:4.0.1'
+    implementation 'io.reactivex.rxjava2:rxjavafx:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+    implementation 'com.tacplatform:tacJ:master-SNAPSHOT'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.10.0'
+
+}
+
+//applicationDefaultJvmArgs = ['--add-exports=javafx.base/com.sun.javafx.event=org.controlsfx.controls']
+applicationDefaultJvmArgs = [
+        '-splash:./package/tacfx_splash.png',
+        '-Djdk.tls.client.protocols=TLSv1.2'
+]
+
+task createProperties(dependsOn: processResources) {
+    doLast {
+        new File("$buildDir/resources/main/version.properties").withWriter { w ->
+            Properties p = new Properties()
+            p['version'] = project.version.toString()
+            p.store w, null
+        }
+    }
+}
+
+classes {
+    dependsOn createProperties
+}
+
+ext.os = org.gradle.internal.os.OperatingSystem.current()
+
+runtime {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+
+    jpackage {
+        skipInstaller = false
+        imageName = "TACWallet"
+        installerName = 'TACWallet'
+        appVersion = version
+        jvmArgs = ['-Djdk.tls.client.protocols=TLSv1.2', '-splash:$APPDIR/tacfx_splash.png']
+        installerOptions = [
+                '--vendor', 'TacFX',
+                '--license-file', 'LICENSE'
+        ]
+        if (os.windows) {
+            imageOptions = ['--icon', './package/tacfx_icon.ico']
+            installerType = "msi"
+            installerOptions += ['--win-upgrade-uuid', 'd4a56a68-bdc2-4138-8572-84fc72c11fbc',
+                                '--win-dir-chooser',
+                                '--win-menu',
+                                '--win-shortcut'
+            ]
+        } else if(os.macOsX) {
+            imageOptions = ['--icon', './package/tacfx_mac_icon.icns',]
+            installerType = 'dmg'
+        } else if (os.unix) {
+            imageOptions = ['--icon', './package/tacfx_linux_icon.png']
+            installerType = "deb"
+            installerOptions += [
+                    '--linux-shortcut'
+            ]
+        }
+    }
+}
+
+def buildDir = "$buildDir"
+tasks.runtime.doLast {
+    copy {
+        includeEmptyDirs = false
+        from("package") {
+            include "tacfx_splash.png"
+        }
+        into buildDir + "/image/bin/package"
+    }
+}
+
+tasks.jpackageImage.doLast {
+    copy {
+        includeEmptyDirs = false
+        from("package") {
+            include "tacfx_splash.png"
+        }
+        if (os.windows) {
+            into buildDir + "/jpackage/TacFX/app"
+        } else if (os.macOsX) {
+            into buildDir + "/jpackage/TacFX.app/Contents/app"
+        } else if (os.unix) {
+            into buildDir + "/jpackage/TacFX/lib/app"
+        }
+    }
+}

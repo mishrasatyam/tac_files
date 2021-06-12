@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>TAC Social Explorer</title>
+    <script src="stars.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Artifika&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <div id="signup" style="display: none;">
+      <div>
+        <div id="logo">
+          <div>
+            Content<br> <span>Discovery</span>
+          </div>
+        </div>
+        <input placeholder="Enter a Username" id="inputName" type="text">
+        <input placeholder="Enter your Email" id="inputEmail" type="email">
+        <input placeholder="Enter a Password" id="inputPassword" type="password">
+        <input placeholder="Re-Enter Password" id="inputPassword2" type="password">
+        <div id="buttonContainer1">
+          <button id="signupButton">Join Now!</button>
+          <div id="linkContainer1">
+            <a id="switch1" href="#switch">Already a Member? Login here.</a>
+            <a id="reset3" href="#reset">Reset Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="login" style="display: none;">
+      <div>
+        <div id="logo2">
+          <div>
+            Content<br> <span>Discovery</span>
+          </div>
+        </div>
+        <input placeholder="Enter username" id="loginName" type="text">
+        <input placeholder="Enter your Password" id="loginPassword" type="password">
+        <div id="buttonContainer2">
+          <button id="loginButton">Login</button>
+          <div id="linkContainer2">
+            <a id="switch2" href="#switch">Not a Member? Join Now!</a>
+            <a id="reset1" href="#reset">Reset Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reset" style="display: none;">
+      <div>
+        <div id="logo2">
+          <div>
+            Content<br> <span>Discovery</span>
+          </div>
+        </div>
+        <div>
+          <a id="resetKey" href="#">Have a reset key?</a>
+        </div>
+        <input placeholder="Enter username" id="resetName" type="text">
+        <input placeholder="Enter email" id="resetEmail" type="text">
+        <div id="buttonContainer2">
+          <button id="resetButton">Request a Reset Key!</button>
+          <div id="linkContainer2">
+            <a id="switch3" href="#switch">Not a Member? Join Now!</a>
+            <a id="reset2" href="#reset">Already a Member? Login here.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="resetKeyForm">
+      <div>
+        <div id="logo2">
+          <div>
+            Content<br> <span>Discovery</span>
+          </div>
+        </div>
+        <input placeholder="Enter username" id="resetKeyName" type="text">
+        <input placeholder="Enter email" id="resetKeyEmail" type="text">
+        <input placeholder="Reset Key" id="tresetKey" type="text">
+        <input placeholder="Enter a Password" id="inputKeyPassword" type="password">
+        <input placeholder="Re-Enter Password" id="inputKeyPassword2" type="password">
+        <div id="buttonContainer2">
+          <button id="resetKeyButton">Send Reset Key!</button>
+          <div id="linkContainer2">
+            <a id="switch4" href="#switch">Not a Member? Join Now!</a>
+            <a id="reset4" href="#reset">Already a Member? Login here.</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="reviewForm" style="display: block;">
+      <h1>
+        <span>Discover<span class="hanger">y</span></span>
+        <div id="starContainer" style="display: block;">
+          <div id="star">
+            
+          <div class="starRatingContainer" style="width: 150px; max-width: 150px; height: 30px;"><div class="className" id="starClick" data-id="52" data-rating="3.00" data-step="0.250" style="width: 90px; height: 30px; background-size: 30px; background-image: url(&quot;./star.png&quot;); background-repeat: repeat-x; min-width: 0px; max-width: 150px;"><div class="emptyStarRating" style="background-size: 30px; background-image: url(&quot;./starbackground.png&quot;); background-repeat: repeat-x; width: 150px; height: 30px;"></div> <div class="rate" style="display: block;">Rate this webpage!</div></div></div></div>
+          <span id="ratingNum">3.00</span>
+        </div>
+      </h1>
+      <div class="report" id="report" style="display: none;">
+        <div class="reportReason" contenteditable="true" placeholder="What is your reason for reporting this site. Found a 404 or 500 error? Pornography? Illegal content? Hate content? What terms do you believe this website violates."></div>
+        <button class="btn btn-success reportButton">Submit Report</button>
+        <button class="backButton"></button>
+      </div>
+      <input name="label1" placeholder="descriptive word or phrase">
+      <input name="label2" placeholder="descriptive word or phrase">
+      <input name="label3" placeholder="descriptive word or phrase">
+      <textarea id="review" placeholder="Leave a review of the usefulness of the website, the web design or your experience with this website or page." autofocus="" style="display: block;"></textarea>
+      <div class="inputButtons" id="inputButtons">
+        <button class="btn btn-success">Image</button>
+        <button class="btn btn-success">Video</button>
+        <button class="btn btn-success">Product</button>
+        <button class="btn btn-success">Service</button>
+        <button class="btn btn-success">Article</button>
+        <button class="btn btn-success">Business</button>
+        <button class="btn btn-success">Other</button>
+      </div>
+      <div class="s1">
+        <select name="cat" id="cat">
+          <option value="0" selected="">SELECT CATEGORY</option>
+          <option value="1">Animals and Veterinary</option>
+          <option value="2">Arts and Entertainment</option>
+          <option value="4">Astrology</option>
+          <option value="3">Astronomy</option>
+          <option value="5">Blockchain and Cryptocurrency</option>
+          <option value="6">Businesses and Finance</option>
+          <option value="7">Climate and Weather</option>
+          <option value="8">Computers and Technology</option>
+          <option value="10">Dictionaries and Encyclopedias</option>
+          <option value="11">Directories</option>
+          <option value="17">Economics</option>
+          <option value="12">Education and School</option>
+          <option value="13">Employment</option>
+          <option value="14">Environment</option>
+          <option value="15">Film, Movies and Television</option>
+          <option value="18">Food and Diet</option>
+          <option value="9">Gaming and Games</option>
+          <option value="19">Government and Polotics</option>
+          <option value="20">Health and Medicine</option>
+          <option value="21>History</option>
+          <option value=" 22"="">Information and Research</option>
+          <option value="23">Journalism and Writing</option>
+          <option value="16">Language and Speech</option>
+          <option value="25">Law and Legal</option>
+          <option value="26">Literature</option>
+          <option value="40">Marketing and Advertising</option>
+          <option value="27">Mathematics</option>
+          <option value="28">Media (photo, video, audio)</option>
+          <option value="29">Music</option>
+          <option value="30">News</option>
+          <option value="31">Philosophy</option>
+          <option value="33">Photography (not images: see media)</option>
+          <option value="34">Physics</option>
+          <option value="32">Places</option>
+          <option value="35">Religion</option>
+          <option value="36">Science</option>
+          <option value="37">Software and Services</option>
+        </select>
+      </div>
+      <div class="s2">
+        <select class="locality-dropdown" id="lang-dropdown"><option value="0">SELECT WEBPAGE LANGUAGE</option><option value="en-us">English (United States)</option><option value="aa">Afar</option><option value="ab">Abkhazian</option><option value="af">Afrikaans</option><option value="am">Amharic</option><option value="ar">Arabic</option><option value="ar-ae">Arabic (U.A.E.)</option><option value="ar-bh">Arabic (Bahrain)</option><option value="ar-dz">Arabic (Algeria)</option><option value="ar-eg">Arabic (Egypt)</option><option value="ar-iq">Arabic (Iraq)</option><option value="ar-jo">Arabic (Jordan)</option><option value="ar-kw">Arabic (Kuwait)</option><option value="ar-lb">Arabic (Lebanon)</option><option value="ar-ly">Arabic (libya)</option><option value="ar-ma">Arabic (Morocco)</option><option value="ar-om">Arabic (Oman)</option><option value="ar-qa">Arabic (Qatar)</option><option value="ar-sa">Arabic (Saudi Arabia)</option><option value="ar-sy">Arabic (Syria)</option><option value="ar-tn">Arabic (Tunisia)</option><option value="ar-ye">Arabic (Yemen)</option><option value="as">Assamese</option><option value="ay">Aymara</option><option value="az">Azeri</option><option value="ba">Bashkir</option><option value="be">Belarusian</option><option value="bg">Bulgarian</option><option value="bh">Bihari</option><option value="bi">Bislama</option><option value="bn">Bengali</option><option value="bo">Tibetan</option><option value="br">Breton</option><option value="ca">Catalan</option><option value="co">Corsican</option><option value="cs">Czech</option><option value="cy">Welsh</option><option value="da">Danish</option><option value="de">German</option><option value="de-at">German (Austria)</option><option value="de-ch">German (Switzerland)</option><option value="de-li">German (Liechtenstein)</option><option value="de-lu">German (Luxembourg)</option><option value="div">Divehi</option><option value="dz">Bhutani</option><option value="el">Greek</option><option value="en">English</option><option value="en-au">English (Australia)</option><option value="en-bz">English (Belize)</option><option value="en-ca">English (Canada)</option><option value="en-gb">English (United Kingdom)</option><option value="en-ie">English (Ireland)</option><option value="en-jm">English (Jamaica)</option><option value="en-nz">English (New Zealand)</option><option value="en-ph">English (Philippines)</option><option value="en-tt">English (Trinidad)</option><option value="en-us">English (United States)</option><option value="en-za">English (South Africa)</option><option value="en-zw">English (Zimbabwe)</option><option value="eo">Esperanto</option><option value="es">Spanish</option><option value="es-ar">Spanish (Argentina)</option><option value="es-bo">Spanish (Bolivia)</option><option value="es-cl">Spanish (Chile)</option><option value="es-co">Spanish (Colombia)</option><option value="es-cr">Spanish (Costa Rica)</option><option value="es-do">Spanish (Dominican Republic)</option><option value="es-ec">Spanish (Ecuador)</option><option value="es-es">Spanish (España)</option><option value="es-gt">Spanish (Guatemala)</option><option value="es-hn">Spanish (Honduras)</option><option value="es-mx">Spanish (Mexico)</option><option value="es-ni">Spanish (Nicaragua)</option><option value="es-pa">Spanish (Panama)</option><option value="es-pe">Spanish (Peru)</option><option value="es-pr">Spanish (Puerto Rico)</option><option value="es-py">Spanish (Paraguay)</option><option value="es-sv">Spanish (El Salvador)</option><option value="es-us">Spanish (United States)</option><option value="es-uy">Spanish (Uruguay)</option><option value="es-ve">Spanish (Venezuela)</option><option value="et">Estonian</option><option value="eu">Basque</option><option value="fa">Farsi</option><option value="fi">Finnish</option><option value="fj">Fiji</option><option value="fo">Faeroese</option><option value="fr">French</option><option value="fr-be">French (Belgium)</option><option value="fr-ca">French (Canada)</option><option value="fr-ch">French (Switzerland)</option><option value="fr-lu">French (Luxembourg)</option><option value="fr-mc">French (Monaco)</option><option value="fy">Frisian</option><option value="ga">Irish</option><option value="gd">Gaelic</option><option value="gl">Galician</option><option value="gn">Guarani</option><option value="gu">Gujarati</option><option value="ha">Hausa</option><option value="he">Hebrew</option><option value="hi">Hindi</option><option value="hr">Croatian</option><option value="hu">Hungarian</option><option value="hy">Armenian</option><option value="ia">Interlingua</option><option value="id">Indonesian</option><option value="ie">Interlingue</option><option value="ik">Inupiak</option><option value="in">Indonesian</option><option value="is">Icelandic</option><option value="it">Italian</option><option value="it-ch">Italian (Switzerland)</option><option value="iw">Hebrew</option><option value="ja">Japanese</option><option value="ji">Yiddish</option><option value="jw">Javanese</option><option value="ka">Georgian</option><option value="kk">Kazakh</option><option value="kl">Greenlandic</option><option value="km">Cambodian</option><option value="kn">Kannada</option><option value="ko">Korean</option><option value="kok">Konkani</option><option value="ks">Kashmiri</option><option value="ku">Kurdish</option><option value="ky">Kirghiz</option><option value="kz">Kyrgyz</option><option value="la">Latin</option><option value="ln">Lingala</option><option value="lo">Laothian</option><option value="ls">Slovenian</option><option value="lt">Lithuanian</option><option value="lv">Latvian</option><option value="mg">Malagasy</option><option value="mi">Maori</option><option value="mk">FYRO Macedonian</option><option value="ml">Malayalam</option><option value="mn">Mongolian</option><option value="mo">Moldavian</option><option value="mr">Marathi</option><option value="ms">Malay</option><option value="mt">Maltese</option><option value="my">Burmese</option><option value="na">Nauru</option><option value="nb-no">Norwegian (Bokmal)</option><option value="ne">Nepali (India)</option><option value="nl">Dutch</option><option value="nl-be">Dutch (Belgium)</option><option value="nn-no">Norwegian</option><option value="no">Norwegian (Bokmal)</option><option value="oc">Occitan</option><option value="om">(Afan)/Oromoor/Oriya</option><option value="or">Oriya</option><option value="pa">Punjabi</option><option value="pl">Polish</option><option value="ps">Pashto/Pushto</option><option value="pt">Portuguese</option><option value="pt-br">Portuguese (Brazil)</option><option value="qu">Quechua</option><option value="rm">Rhaeto-Romanic</option><option value="rn">Kirundi</option><option value="ro">Romanian</option><option value="ro-md">Romanian (Moldova)</option><option value="ru">Russian</option><option value="ru-md">Russian (Moldova)</option><option value="rw">Kinyarwanda</option><option value="sa">Sanskrit</option><option value="sb">Sorbian</option><option value="sd">Sindhi</option><option value="sg">Sangro</option><option value="sh">Serbo-Croatian</option><option value="si">Singhalese</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="sm">Samoan</option><option value="sn">Shona</option><option value="so">Somali</option><option value="sq">Albanian</option><option value="sr">Serbian</option><option value="ss">Siswati</option><option value="st">Sesotho</option><option value="su">Sundanese</option><option value="sv">Swedish</option><option value="sv-fi">Swedish (Finland)</option><option value="sw">Swahili</option><option value="sx">Sutu</option><option value="syr">Syriac</option><option value="ta">Tamil</option><option value="te">Telugu</option><option value="tg">Tajik</option><option value="th">Thai</option><option value="ti">Tigrinya</option><option value="tk">Turkmen</option><option value="tl">Tagalog</option><option value="tn">Tswana</option><option value="to">Tonga</option><option value="tr">Turkish</option><option value="ts">Tsonga</option><option value="tt">Tatar</option><option value="tw">Twi</option><option value="uk">Ukrainian</option><option value="ur">Urdu</option><option value="us">English</option><option value="uz">Uzbek</option><option value="vi">Vietnamese</option><option value="vo">Volapuk</option><option value="wo">Wolof</option><option value="xh">Xhosa</option><option value="yi">Yiddish</option><option value="yo">Yoruba</option><option value="zh">Chinese</option><option value="zh-cn">Chinese (China)</option><option value="zh-hk">Chinese (Hong Kong SAR)</option><option value="zh-mo">Chinese (Macau SAR)</option><option value="zh-sg">Chinese (Singapore)</option><option value="zh-tw">Chinese (Taiwan)</option><option value="zu">Zulu</option></select>
+      </div>
+      <div id="tu"></div>
+      <div id="td"></div><div id="nextpage"></div>
+      <div class="nav">
+        <a href="#" class="controls icon">
+          <img src="profile.svg" title="profile">
+        </a>
+        <a href="#" class="controls icon">
+          <img src="settings1.svg" title="settings">
+        </a>
+        <a href="#" class="controls icon">
+          <img src="boost.svg" title="webiste boost">
+        </a>
+        <a href="#" class="controls icon" style="display: block;">
+          <img src="badsite.svg" title="Report Site">
+        </a>
+      </div>
+      
+      <span id="rating" class="className" style="visibility: hidden;display: block; line-height: 0;"></span>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

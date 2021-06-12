@@ -1,0 +1,10 @@
+syntax = "proto3";
+package tac;
+option java_package = "com.tacplatform.protobuf";
+option csharp_namespace = "Tac";
+option go_package = "github.com/tacplatform/gotac/pkg/grpc/generated/tac";
+
+message Amount {
+    bytes asset_id = 1;
+    int64 amount = 2;
+};
